@@ -53,11 +53,18 @@ header {
 	width: 100%;
 	box-shadow: 0 0px 2px rgba(0, 0, 0, 0.26);
 	margin-top: 0.3rem;
-	min-height: 75vh;
 }
-.about, .projects, .contact {
+.about {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.projects, .contact {
   width: 100%;
   height: 100vh;
+  
+}
+.contact, .projects {
+  margin-top: 1rem;
 }
 .front {
   position: absolute;
