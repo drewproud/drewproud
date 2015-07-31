@@ -18,7 +18,7 @@ Meteor.startup(function () {
       }
     ];
   
-  if (Portfolio.find({}).length === 0) {
+  if (Portfolio.find({}).fetch().length === 0) {
     portfolio.forEach(function(project) {
       Portfolio.insert(project);
     });

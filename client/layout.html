@@ -1,30 +1,37 @@
-<head>
+
+  <head>
 	<title>Letladi Sebesho</title>
 	<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="author" content="Letladi Sebesho" />
 		<meta name="description" content="A simple portfolio website built with Meteor" />
-		<meta name="keywords" content="projects, portfolio" /><!--
-		<link rel="shortcut icon" href="../favicon.ico">  -->
+		<meta name="keywords" content="projects, portfolio" />
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
+ 
 </head>
 <body>
+  {{> layout }}
+</body>
 
-<div class="container">
-
-	<header class="header clearfix">
+<template name="layout">
+  <div class="container">
+    <header class="header clearfix">
     <h1>Letladi Sebesho</h1>
+    <span class=""></span>
+    <div>
+      <ul>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+    </div>
 	</header>
-	
+  
 	<div class="main clearfix">
 		
 	</div>
 
 	{{> footer }}
-
-</div>
-
-</body>
+  </div>
+</template>
