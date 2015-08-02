@@ -1,18 +1,15 @@
-Template.layout.events({
-  'click .submit-form': function(e) {
-    e.preventDefault();
-    sendEmail();
-  },
-  'submit form': function(e) {
-    e.preventDefault();
-    sendEmail();
-  }
+Template.layout.onRendered(function() {
+  $('.contact-form').validate({
+    submitHandler: function(ev) {
+      sendEmail();
+    }
+  });
 });
 
 function sendEmail() {
-   var name = $('form [name=name]').val();
-    var email = $('form [name=email]').val();
-    var message = $('form [name=message]').val();
-    console.log('Sending Email..');
-    Meteor.call('sendEmail', name, email, message);
+  var name = $('form [name=name]').val();
+  var email = $('form [name=email]').val();
+  var message = $('form [name=message]').val();
+  Meteor.call('sendEmail', name, email, message);
+  $('form [name=message]').val('');
 }
