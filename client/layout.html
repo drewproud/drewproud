@@ -33,7 +33,7 @@
     </div>
     <div class="projects">
       <div class="front">Go to my projects</div>
-      <div class="back">Here are my projects</div>
+      {{> projects }}
     </div>
     <div class="contact">
       <div class="front">Go to my contact page</div>
@@ -50,5 +50,16 @@
 	</div>
 
 	{{> footer }}
+  </div>
+</template>
+
+<template name="project">
+  <a href="{{url}}" target="_blank">{{name}}</a>
+</template>
+<template name="projects">
+  <div class="back">
+  {{#each projects}}
+    {{> project }}
+  {{/each}}
   </div>
 </template>

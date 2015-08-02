@@ -33,7 +33,7 @@ li {
 }
 
 .container {
-	width: 93%;
+	width: 90%;
 	margin: 0 auto;
 	position: relative;
 	padding-bottom: 2rem;
@@ -117,4 +117,3 @@ footer li:first-child {
 		max-width: 1250px;
 	}
 }
-
