@@ -32,7 +32,8 @@ li {
 	list-style: none;
 }
 
-div, header, footer, .section-links ul, .projects, .contact {
+div, header, footer, .section-links ul, .projects, .contact,
+.contact-form, .contact-form input {
   position: relative;
   width: 100%;
 }
@@ -76,11 +77,15 @@ header {
 .about, .projects > div, .contact > div {
   padding: 10px;
 } 
-.front > p {
-  text-align: right;
+.front > h2 {
+  text-align: center;
 }
-.front p > span:hover, .back p > span:hover {
-  border-bottom: 1px dashed rgba(0, 0, 0, .26);
+.front div {
+  text-align: center;
+  padding-top: 180px;
+}
+.back p > span:hover {
+  font-weight: 700;
 }
 .contact, .projects {
   margin-top: 1rem;
@@ -98,7 +103,6 @@ header {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
-  background-color: pink;
   transition: transform 0.6s linear 0s;
 }
 .projects .hide-front, .contact .hide-front {
@@ -106,6 +110,28 @@ header {
 }
 .projects .show-back, .contact .show-back {
   transform: perspective(600px) rotateY(0deg);
+}
+
+.contact-form {
+  margin-top: 50px;
+  background-color: transparent;
+}
+.contact-form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 40px;
+  border: none;
+  text-align: center;
+  background-color: rgba(0, 158, 96, 0.5); /* Shamrock green */
+}
+.contact-form input.error {
+  background-color: rgba(227, 38, 54, 0.5); /* alizarin crimson */
+}
+.contact-form [name=message] {
+  height: 70px;
+}
+.contact-form .submit-form {
+  background-color: rgba(86, 160, 211, 0.6); /* Carolina Blue */
 }
 
 /* footer */
