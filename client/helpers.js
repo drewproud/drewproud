@@ -6,6 +6,9 @@ var portfolio = [
     name: 'Corporate Youth', url: 'corporateyouth.co.za', tools: ['html5 theme']
   }, 
   {
+    name: 'GreyingSky', url: 'greyingsky.co.za', tools: ['html5 theme']
+  },
+  {
     name: 'Letladi', url: 'letladi.com', tools: ['css3', 'html5', 'MeteorJS']
   }, 
   {
@@ -19,8 +22,18 @@ var portfolio = [
 Template.footer.helpers({
   'year': function() {
     return new Date().getFullYear()
-  },
-  'projects': portfolio
+  }
 });
+
+Template.layout.helpers({
+  'projects': function() {
+    return portfolio;
+  }
+});
+Template.project.helpers({
+  'tools': function() {
+    return this.tools.join(' / ');
+  }
+})
 
  

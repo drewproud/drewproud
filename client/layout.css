@@ -43,7 +43,7 @@ div, header, footer, .section-links ul, .projects, .contact,
 	margin: 0 auto;
 	position: relative;
 	padding-bottom: 2rem;
-  min-width: 270px;
+  min-width: 490px;
 }
 /* Header */
 header {
@@ -65,17 +65,20 @@ header {
 .main {
 	position: relative;
 	margin-top: 0.3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about, .projects, .contact {
   box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.26);
 }
+.about, .projects {
+  margin-bottom: 0.5rem;
+}
 
 .about, .projects, .contact, .projects > div, .contact > div, .front, .back {
-  height: 490px;
-  overflow: auto;
-  overflow-x: hidden;
+  height: 550px;
+  /*overflow: auto; ## If you leave this on; scroll-bar will     overflow-x: hidden;## appear udring animation
+   */
 }
 .about, .projects > div, .contact > div {
   padding: 10px;
@@ -90,9 +93,6 @@ header {
 .back p > span:hover {
   font-weight: 700;
 }
-.contact, .projects {
-  margin-top: 1rem;
-}
 
 .front {
   position: absolute;
@@ -100,7 +100,6 @@ header {
   -moz-transform: perspective(600px) rotateY(0deg);
   backface-visibility: hidden;
   transition: transform 0.6s linear 0s;
-  background-color: gray;
 }
 .back {
   position: absolute;
@@ -115,13 +114,24 @@ header {
   transform: perspective(600px) rotateY(0deg);
 }
 
-/* font awesome */
+/* font awesome styling */
 i {
   color: rgba(0, 158, 96, 0.5);
   transition: 0.8s;
 } 
-.front:hover i {
+.front:hover i,  {
   text-shadow: 1px 1px 1px rgba(0, 158, 96, 0.5);
+}
+
+.project {
+  margin-top: 1rem;
+  transition: 1s;
+}
+.project:hover {
+  background-color: rgba(0, 158, 96, 0.1);
+}
+.project * {
+  text-align: center;
 }
 
 .contact-form {
@@ -164,8 +174,33 @@ footer li:first-child {
 	padding-left: 0.4rem;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 640px) {
+  .about {
+    margin-right: 7px;
+  }
+  .about, .projects, .contact {
+    float: left;
+  }
+  .about, .projects {
+    width: 49.5%;
+  }
+
+  .contact {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
 	.container {
-		max-width: 1250px;
+		max-width: 900px;
 	}
+  .about, .projects, .contact {
+    width: 32.7%;
+  }
+  .about, .projects {
+    margin-right: 7px;
+  }
+  .projects {
+    margin-left: 0px;
+  }
 }
