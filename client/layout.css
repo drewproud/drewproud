@@ -119,8 +119,8 @@ i {
   color: rgba(0, 158, 96, 0.5);
   transition: 0.8s;
 } 
-.front:hover i,  {
-  text-shadow: 1px 1px 1px rgba(0, 158, 96, 0.5);
+.front:hover i {
+  text-shadow: 1px 1px 1px rgba(0, 158, 96, 0.8);
 }
 
 .project {

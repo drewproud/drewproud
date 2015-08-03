@@ -9,13 +9,10 @@ var portfolio = [
     name: 'GreyingSky', url: 'greyingsky.co.za', tools: ['html5 theme']
   },
   {
-    name: 'Letladi', url: 'letladi.com', tools: ['css3', 'html5', 'MeteorJS']
+    name: 'Letladi', url: 'kolonyane.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
   }, 
   {
-    name: 'Revolver Music', url: 'revolvermusic.co.za', tools: ['css3', 'html5', 'MeteorJS']
-  },
-  {
-    name: 'Banele Khoza', url: 'banelekhoza.co.za', tools: ['css3', 'html5', 'MeteorJS']
+    name: 'Revolver Music', url: 'revolver.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
   }
 ];
 
