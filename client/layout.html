@@ -18,6 +18,14 @@
     <header>
     <h1>Letladi Sebesho</h1>
 	</header>
+    
+    <div class="section-links">
+      <ul>
+        <li class="about-link">About</li>
+        <li class="project-link">Projects</li>
+        <li class="contact-link">Contact</li>
+      </ul>
+    </div>
   
 	<div class="main clearfix">
     <div class="about">
@@ -32,34 +40,29 @@
         I'm creating <a href="https://www.youtube.com/channel/UC3PT8CHM5OLOsfMgqWUnKkQ" target="_blank">CodePond</a> to share experiences as I build projects as well provide helpful advice to those coming after me, so that they get productive quicker than I did.</p>
     </div>
     <div class="projects">
-      <div class="front">Go to my projects</div>
-      {{> projects }}
+      <div class="front">
+        <p><span>Projects <i class="fa fa-angle-right"></i></span></p>
+      </div>
+      <div class="back">
+        <p><span><i class="fa fa-angle-left"></i> Back</span></p>
+      </div>
     </div>
     <div class="contact">
-      <div class="front">Go to my contact page</div>
+      <div class="front">
+        <p><span>Contact <i class="fa fa-angle-right"></i></span></p>
+      </div>
       <div class="back">
+        <p><span><i class="fa fa-angle-left"></i> Back</span> </p>
         <form class="contact-form">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <input type="text" name="message" placeholder="Message" required />
           <input type="submit" value="Submit" class="submit-form" />
-          
         </form>
       </div>
     </div>
 	</div>
 
 	{{> footer }}
-  </div>
-</template>
-
-<template name="project">
-  <a href="{{url}}" target="_blank">{{name}}</a>
-</template>
-<template name="projects">
-  <div class="back">
-  {{#each projects}}
-    {{> project }}
-  {{/each}}
   </div>
 </template>

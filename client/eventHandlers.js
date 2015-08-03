@@ -1,16 +1,25 @@
-Template.layout.onRendered(function() {
-  $('.contact-form').validate({
-    submitHandler: function(ev) {
-      sendEmail();
-    }
-  });
+Template.layout.events({
+  'click .front p span': function(ev) {
+    var sectionDiv = getSectionDiv(ev.target);
+    var sectionDivClass = getSectionDivClass(sectionDiv);
+    turnDisplay(sectionDivClass);
+  },
+  'click .back p > span': function(ev) {
+    var sectionDiv = getSectionDiv(ev.target);
+    var sectionDivClass = getSectionDivClass(sectionDiv);
+    turnDisplay(sectionDivClass);
+  }
 });
 
-function sendEmail() {
-  var name = $('form [name=name]').val();
-  var email = $('form [name=email]').val();
-  var message = $('form [name=message]').val();
-  Meteor.call('sendEmail', name, email, message);
-  $('form [name=message]').val('');
-  toastr.success('..Email Received. Thank You. I will get back to you in 24 Hours...');
+function turnDisplay(sectionDivClass) {
+  $('.' + sectionDivClass + ' .front').toggleClass('hide-front');
+  $('.' + sectionDivClass + ' .back').toggleClass('show-back');
+}
+
+function getSectionDivClass(sectionDiv) {
+  return $(sectionDiv).attr('class');
+}
+
+function getSectionDiv(currentElement) {
+  return $(currentElement).parents()[2];
 }
