@@ -1,12 +1,10 @@
 Template.layout.events({
   'click .front': function(ev) {
-    var sectionDiv = getSectionDiv(ev.target);
-    var sectionDivClass = getSectionDivClass($(ev.target).parents()[1]);
+    var sectionDivClass = getSectionDivClass($(ev.target).parents());
     turnDisplay(sectionDivClass);
   },
-  'click .back p > span': function(ev) {
-    var sectionDiv = getSectionDiv(ev.target);
-    var sectionDivClass = getSectionDivClass(sectionDiv);
+  'click .back-btn': function(ev) {
+    var sectionDivClass = getSectionDivClass($(ev.target).parents());
     turnDisplay(sectionDivClass);
   }
 });
@@ -16,10 +14,13 @@ function turnDisplay(sectionDivClass) {
   $('.' + sectionDivClass + ' .back').toggleClass('show-back');
 }
 
-function getSectionDivClass(sectionDiv) {
-  return $(sectionDiv).attr('class');
-}
-
-function getSectionDiv(currentElement) {
-  return $(currentElement).parents()[2];
+function getSectionDivClass(sectionParents) {
+  var sectionClass, currentClass;
+  $.each(sectionParents, function(idx, parent) {
+    currentClass = $(parent).attr('class');
+    if (currentClass === 'projects' || currentClass === 'contact') {
+      sectionClass = currentClass;
+    }
+  });
+  return sectionClass;
 }
