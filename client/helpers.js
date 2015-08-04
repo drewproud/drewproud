@@ -1,18 +1,18 @@
 var portfolio = [
   {
-    name: 'Thabang Tlaka', url: 'thabangtlaka.co.za', tools: ['html5 theme']
+    name: 'Thabang Tlaka', url: 'http://thabangtlaka.co.za', tools: ['html5 theme']
   },
   {
-    name: 'Corporate Youth', url: 'corporateyouth.co.za', tools: ['html5 theme']
+    name: 'Corporate Youth', url: 'http://corporateyouth.co.za', tools: ['html5 theme']
   }, 
   {
-    name: 'GreyingSky', url: 'greyingsky.co.za', tools: ['html5 theme']
+    name: 'GreyingSky', url: 'http://greyingsky.co.za', tools: ['html5 theme']
   },
   {
-    name: 'Letladi', url: 'kolonyane.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
+    name: 'Letladi', url: 'http://kolonyane.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
   }, 
   {
-    name: 'Revolver Music', url: 'revolver.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
+    name: 'Revolver Music', url: 'http://revolver.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
   }
 ];
 
