@@ -1,2 +1,2 @@
-## *Letladi(kolonyane.meteor.com/) website 
+## *Letladi(letladi.com/) website 
 A simple meteor portfolio site
