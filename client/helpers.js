@@ -9,7 +9,7 @@ var portfolio = [
     name: 'GreyingSky', url: 'http://greyingsky.co.za', tools: ['html5 theme']
   },
   {
-    name: 'Letladi', url: 'http://kolonyane.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
+    name: 'Letladi', url: 'http://letladi.com', tools: ['css3', 'html5', 'MeteorJS']
   }, 
   {
     name: 'Revolver Music', url: 'http://revolver.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
@@ -31,6 +31,4 @@ Template.project.helpers({
   'tools': function() {
     return this.tools.join(' / ');
   }
-})
-
- 
+});
