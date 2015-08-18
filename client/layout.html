@@ -29,20 +29,11 @@
           </div>
           <div class="back">
             <div class="tech-stack">
-              <h3>techologies</h3>
+              <h3>technologies</h3>
               <ul>
-                <li>JavaScript</li>
-                <li>C#</li>
-                <li>Node.js</li>
-                <li>VB</li>
-                <li>MeteorJS</li>
-                <li>AngularJS</li>
-                <li>XML</li>
-                <li>ASP.NET</li>
-                <li>MongoDB</li>
-                <li>SQL</li>
-                <li>HTML5</li>
-                <li>CSS3</li>
+              {{#each technologies}}
+                <li>{{ this }}</li>
+              {{/each}}
               </ul>
             </div>
           </div>
@@ -52,9 +43,20 @@
             <div>L<br/>i<br/>n<br/>k<br/>s</div>
           </div>
           <div class="back">
-            {{#each projects}}
-              {{> project }}
-            {{/each}}
+            <div class="projects">
+              <h3>projects</h3>
+              {{#each projects}}
+                {{> project }}
+              {{/each}}
+            </div>
+            <div class="mylinks">
+              <h3>me</h3>
+              <ul>
+                {{#each myLinks}}
+                  <li><a href="{{ link }}" target="_blank"><img src="{{ icon }}"><p>{{ text }}</p></a></li>
+                {{/each}}
+              </ul>
+            </div>
           </div>
         </div>
         <div class="contact">

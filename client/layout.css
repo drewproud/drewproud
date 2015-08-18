@@ -41,7 +41,6 @@ html, body {
 
 a {
 	color: #4BB143;
-	text-decoration: none;
 }
 
 li {
@@ -99,6 +98,7 @@ header {
 
 .about {
   background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("city2.jpg");
+  background-position-y: -100px;
 }
 
 .links {
@@ -261,11 +261,37 @@ footer li:first-child {
   font-size: 125%;
 }
 
-.tech-stack h3 {}
-
 .tech-stack li {
   float: left;
   padding: 1em;
   margin: .5em;
   background-color: rgba(227, 38, 54, 0.5);
+}
+
+.main h3 {
+  margin: 1em;
+  font-weight: 400;
+}
+
+.mylinks li {
+  padding: 0;
+  margin: .5em;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: block;
+}
+
+.mylinks a {
+  display: block;
+  text-decoration: none;
+  color: #223866;
+  font-size: 150%;
+  text-align: center;
+}
+
+.mylinks img {
+  margin-top: .5em;
+}
+
+.mylinks p {
+
 }
