@@ -60,6 +60,7 @@ div, header, footer, .section-links ul, .projects, .contact,
 	padding-bottom: 2rem;
   min-width: 490px;
 }
+
 /* Header */
 header {
 	margin: 0 auto;
@@ -68,6 +69,15 @@ header {
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   font-size: 150%;
+  color: #961417;
+}
+
+.name-header-left {
+  font-weight: 300;
+}
+
+.name-header-right {
+  font-weight: 900;
 }
 
 /* section 'links' */
@@ -228,12 +238,4 @@ footer li:first-child {
 
 .back-btn {
   font-size: 125%;
-}
-
-.name-header-left {
-  font-weight: 100;
-}
-
-.name-header-right {
-  font-weight: 900;
 }
