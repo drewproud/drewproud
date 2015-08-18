@@ -1,19 +1,19 @@
 var portfolio = [
   {
-    name: 'Thabang Tlaka', url: 'http://thabangtlaka.co.za', tools: ['html5 theme']
+    name: 'Union Capital Boston', url: 'http://ucbapp.org', tools: ['html5', 'geolocation', 'mobile']
   },
   {
-    name: 'Corporate Youth', url: 'http://corporateyouth.co.za', tools: ['html5 theme']
-  }, 
-  {
-    name: 'GreyingSky', url: 'http://greyingsky.co.za', tools: ['html5 theme']
+    name: 'Whip', url: 'http://whip.meteor.com', tools: ['html5','geolocation', 'mobile']
   },
-  {
-    name: 'Letladi', url: 'http://letladi.com', tools: ['css3', 'html5', 'MeteorJS']
-  }, 
-  {
-    name: 'Revolver Music', url: 'http://revolver.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
-  }
+  // {
+  //   name: 'GreyingSky', url: 'http://greyingsky.co.za', tools: ['html5 theme']
+  // },
+  // {
+  //   name: 'Letladi', url: 'http://letladi.com', tools: ['css3', 'html5', 'MeteorJS']
+  // },
+  // {
+  //   name: 'Revolver Music', url: 'http://revolver.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
+  // }
 ];
 
 Template.footer.helpers({

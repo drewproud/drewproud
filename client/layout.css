@@ -16,24 +16,30 @@ html, body {
 	font-family: Raleway, Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 15px;
-  color: #333;
   overflow: auto;
   overflow-x: hidden;
   position: relative;
   color: white;
-  background-color: white;
+  /*background-color: white;*/
+  background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");
 }
 
 .bg-img {
-  background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");
-  top: -600px;
-  height: 1000px;
+  /*background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");*/
+  /*top: -600px;*/
+  height: 1200px;
   /*background-position: top -400px;*/
   position: fixed;
 }
 
+.bg-cover {
+  position: fixed;
+  height: 200px;
+  background-color: white;
+}
+
 a {
-	color: #555;
+	color: #4BB143;
 	text-decoration: none;
 }
 
@@ -60,6 +66,8 @@ header {
 	/*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);*/
 	text-align: center;
   font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-size: 150%;
 }
 
 /* section 'links' */
@@ -220,4 +228,12 @@ footer li:first-child {
 
 .back-btn {
   font-size: 125%;
+}
+
+.name-header-left {
+  font-weight: 100;
+}
+
+.name-header-right {
+  font-weight: 900;
 }
