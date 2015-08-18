@@ -21,7 +21,7 @@ function getSectionDivClass(sectionParents) {
   var sectionClass, currentClass;
   $.each(sectionParents, function(idx, parent) {
     currentClass = $(parent).attr('class');
-    if (currentClass === 'projects' || currentClass === 'contact') {
+    if (currentClass === 'projects' || currentClass === 'contact' || currentClass === 'about') {
       sectionClass = currentClass;
     }
   });

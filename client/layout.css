@@ -110,7 +110,7 @@ header {
 }
 
 .about, .projects, .contact {
-  box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.26);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
   overflow: hidden;
   /*background: rgba(0,0,0,.8);*/
 }
@@ -149,17 +149,17 @@ header {
 }
 
 .back {
-  position: absolute;
+  /*position: absolute;*/
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
 }
 
-.projects .hide-front, .contact .hide-front {
+.projects .hide-front, .contact .hide-front, .about .hide-front {
   transform: perspective(600px) rotateY(-180deg);
 }
 
-.projects .show-back, .contact .show-back {
+.projects .show-back, .contact .show-back, .about .show-back {
   transform: perspective(600px) rotateY(0deg);
 }
 
@@ -259,4 +259,13 @@ footer li:first-child {
 
 .back-btn {
   font-size: 125%;
+}
+
+.tech-stack h3 {}
+
+.tech-stack li {
+  float: left;
+  padding: 1em;
+  margin: .5em;
+  background-color: rgba(227, 38, 54, 0.5);
 }
