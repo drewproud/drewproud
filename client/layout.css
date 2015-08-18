@@ -21,7 +21,8 @@ html, body {
   position: relative;
   color: white;
   /*background-color: white;*/
-  background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");
+  /*background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");*/
+  background-color: #3D5381;
 }
 
 .bg-img {
@@ -96,10 +97,22 @@ header {
   margin-bottom: 1rem;
 }
 
+.about {
+  background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("city2.jpg");
+}
+
+.projects {
+  background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("city3.jpg");
+}
+
+.contact {
+  background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("old.jpg");
+}
+
 .about, .projects, .contact {
   box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.26);
   overflow: hidden;
-  background: rgba(0,0,0,.8);
+  /*background: rgba(0,0,0,.8);*/
 }
 .about, .projects {
   margin-bottom: 0.5rem;
@@ -113,13 +126,14 @@ header {
 .about, .projects > div, .contact > div {
   padding: 10px;
 }
-.front > h2 {
-  text-align: center;
-}
+
 .front div {
   text-align: center;
-  padding-top: 180px;
+  font-size: 200%;
+  margin: auto;
+  text-transform: lowercase;
 }
+
 .back p > span:hover {
   font-weight: 700;
 }
@@ -131,6 +145,7 @@ header {
   backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
   cursor: pointer;
+  display: inline-flex;
 }
 .back {
   position: absolute;
