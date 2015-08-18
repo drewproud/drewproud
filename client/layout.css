@@ -114,15 +114,15 @@ header {
   overflow: hidden;
   /*background: rgba(0,0,0,.8);*/
 }
+
 .about, .projects {
   margin-bottom: 0.5rem;
 }
 
 .about, .projects, .contact, .projects > div, .contact > div, .front, .back {
   height: 550px;
-  /*overflow: auto; ## If you leave this on; scroll-bar will     overflow-x: hidden;## appear udring animation
-   */
 }
+
 .about, .projects > div, .contact > div {
   padding: 10px;
 }
@@ -147,15 +147,18 @@ header {
   cursor: pointer;
   display: inline-flex;
 }
+
 .back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
 }
+
 .projects .hide-front, .contact .hide-front {
   transform: perspective(600px) rotateY(-180deg);
 }
+
 .projects .show-back, .contact .show-back {
   transform: perspective(600px) rotateY(0deg);
 }
@@ -165,7 +168,8 @@ i {
   color: rgba(0, 158, 96, 0.5);
   transition: 0.8s;
 }
-.front:hover i {
+
+.front:hover {
   text-shadow: 1px 1px 1px rgba(0, 158, 96, 0.8);
 }
 
@@ -173,9 +177,11 @@ i {
   margin-top: 1rem;
   transition: 1s;
 }
+
 .project:hover {
   background-color: rgba(0, 158, 96, 0.1);
 }
+
 .project * {
   text-align: center;
 }
