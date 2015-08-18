@@ -1,9 +1,9 @@
 <head>
-	<title>Letladi Sebesho</title>
+	<title>Drew Proud</title>
 	<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="author" content="Letladi Sebesho" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Drew Proud" />
 		<meta name="description" content="A simple portfolio website built with Meteor" />
 		<meta name="keywords" content="projects, portfolio" />
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
@@ -14,54 +14,53 @@
 </body>
 
 <template name="layout">
+  <div class="bg-img"></div>
+  <div class="bg-cover"></div>
   <div class="container">
     <header>
-    <h1>Letladi Sebesho</h1>
-	</header>
-  
-	<div class="main clearfix">
-    <div class="about">
-      <p>I am Letladi Sebesho, a full-stack Javascript developer from South Africa.</p>
-      <p>Currently experimenting and builing projects with Meteor & Node.js.</p>
-      <p>Also doing a part-time Maths & CS degree with UNISA (University of South Africa), which explains my forays into C++.</p>
-      <p>I started the Pretoria Meteor Meetup, so if you're ever in the area, 
-        please <a href="http://www.meetup.com/Meteor-Pretoria/" target="_blank">join us</a></p>
-      <br>
-      <p>My programming journey started in February 2013 with Java. After doing the OCPJP & OCEWCD, I dabbled in other languages (Ruby, Python, PHP, C), then settled on Javascript.</p>
-      <p>My programming journey was long and painful, and full of a lot of false-starts. 
-        I'm creating <a href="https://www.youtube.com/channel/UC3PT8CHM5OLOsfMgqWUnKkQ" target="_blank">CodePond</a> to share experiences as I build projects as well provide helpful advice to those coming after me, so that they get productive quicker than I did.</p>
-    </div>
-    <div class="projects">
-      <div class="front">
-        <h2>Projects</h2>
-        <div><i class="fa fa-black-tie fa-5x"></i>
-</div>
-      </div>
-      <div class="back">
-        <p><span class="back-btn"><i class="fa fa-angle-left"></i> Back</span></p>        
-        {{#each projects}}
-          {{> project }}
-        {{/each}}
-      </div>
-    </div>
-    <div class="contact">
-      <div class="front">
-        <h2>Contact</h2>
-        <div><i class="fa fa-commenting fa-5x"></i></div>
-      </div>
-      <div class="back">
-        <p><span class="back-btn"><i class="fa fa-angle-left back-btn"></i> Back</span> </p>
-        <form class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="textarea" name="message" placeholder="Message" required />
-          <input type="submit" value="Submit" class="submit-form" />
-        </form>
-      </div>
-    </div>
-	</div>
-
-	{{> footer }}
+      <h1>Drew Proud</h1>
+  	</header>
+    <main>
+    	<div class="main clearfix">
+        <div class="about">
+          <ul>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>VB.NET</li>
+            <li>MeteorJS</li>
+            <li>AngularJS</li>
+          </ul>
+        </div>
+        <div class="projects">
+          <div class="front">
+            <h2>Projects</h2>
+            <div><i class="fa fa-black-tie fa-5x"></i></div>
+          </div>
+          <div class="back">
+            <a href="#" class="back-btn"><i class="fa fa-angle-left"></i> Back</a>
+            {{#each projects}}
+              {{> project }}
+            {{/each}}
+          </div>
+        </div>
+        <div class="contact">
+          <div class="front">
+            <h2>Contact</h2>
+            <div><i class="fa fa-commenting fa-5x"></i></div>
+          </div>
+          <div class="back">
+            <a href="#" class="back-btn"><i class="fa fa-angle-left back-btn"></i> Back</a>
+            <form class="contact-form">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="textarea" name="message" placeholder="Message" required />
+              <input type="submit" value="Submit" class="submit-form" />
+            </form>
+          </div>
+        </div>
+    	</div>
+    </main>
+	 {{> footer }}
   </div>
 </template>
 

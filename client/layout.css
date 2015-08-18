@@ -14,13 +14,22 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 html, body {
 	font-family: Raleway, Helvetica, Arial, sans-serif;
-	background: #f9f9f9;
-    font-weight: 300;
-    font-size: 15px;
-    color: #333;
-    overflow: auto;
-    overflow-x: hidden;
-    position: relative;
+  font-weight: 300;
+  font-size: 15px;
+  color: #333;
+  overflow: auto;
+  overflow-x: hidden;
+  position: relative;
+  color: white;
+  background-color: white;
+}
+
+.bg-img {
+  background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");
+  top: -600px;
+  height: 1000px;
+  /*background-position: top -400px;*/
+  position: fixed;
 }
 
 a {
@@ -48,8 +57,9 @@ div, header, footer, .section-links ul, .projects, .contact,
 /* Header */
 header {
 	margin: 0 auto;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	/*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);*/
 	text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
 /* section 'links' */
@@ -70,6 +80,8 @@ header {
 
 .about, .projects, .contact {
   box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+  background: rgba(0,0,0,.8);
 }
 .about, .projects {
   margin-bottom: 0.5rem;
@@ -82,7 +94,7 @@ header {
 }
 .about, .projects > div, .contact > div {
   padding: 10px;
-} 
+}
 .front > h2 {
   text-align: center;
 }
@@ -99,13 +111,14 @@ header {
   -webkit-transform: perspective(600px) rotateY(0deg);
   -moz-transform: perspective(600px) rotateY(0deg);
   backface-visibility: hidden;
-  transition: transform 0.6s linear 0s;
+  transition: transform 0.2s linear 0s;
+  cursor: pointer;
 }
 .back {
   position: absolute;
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
-  transition: transform 0.6s linear 0s;
+  transition: transform 0.2s linear 0s;
 }
 .projects .hide-front, .contact .hide-front {
   transform: perspective(600px) rotateY(-180deg);
@@ -118,7 +131,7 @@ header {
 i {
   color: rgba(0, 158, 96, 0.5);
   transition: 0.8s;
-} 
+}
 .front:hover i {
   text-shadow: 1px 1px 1px rgba(0, 158, 96, 0.8);
 }
@@ -203,4 +216,8 @@ footer li:first-child {
   .projects {
     margin-left: 0px;
   }
+}
+
+.back-btn {
+  font-size: 125%;
 }
