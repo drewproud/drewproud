@@ -48,7 +48,7 @@ li {
 	list-style: none;
 }
 
-div, header, footer, .section-links ul, .projects, .contact,
+div, header, footer, .section-links ul, .links, .contact,
 .contact-form, .contact-form input {
   position: relative;
   width: 100%;
@@ -101,7 +101,7 @@ header {
   background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("city2.jpg");
 }
 
-.projects {
+.links {
   background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("city3.jpg");
 }
 
@@ -109,21 +109,21 @@ header {
   background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("old.jpg");
 }
 
-.about, .projects, .contact {
+.about, .links, .contact {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
   overflow: hidden;
   /*background: rgba(0,0,0,.8);*/
 }
 
-.about, .projects {
+.about, .links {
   margin-bottom: 0.5rem;
 }
 
-.about, .projects, .contact, .projects > div, .contact > div, .front, .back {
+.about, .links, .contact, .links > div, .contact > div, .front, .back {
   height: 550px;
 }
 
-.about, .projects > div, .contact > div {
+.about, .links > div, .contact > div {
   padding: 10px;
 }
 
@@ -155,11 +155,11 @@ header {
   transition: transform 0.2s linear 0s;
 }
 
-.projects .hide-front, .contact .hide-front, .about .hide-front {
+.links .hide-front, .contact .hide-front, .about .hide-front {
   transform: perspective(600px) rotateY(-180deg);
 }
 
-.projects .show-back, .contact .show-back, .about .show-back {
+.links .show-back, .contact .show-back, .about .show-back {
   transform: perspective(600px) rotateY(0deg);
 }
 
@@ -230,10 +230,10 @@ footer li:first-child {
   .about {
     margin-right: 7px;
   }
-  .about, .projects, .contact {
+  .about, .links, .contact {
     float: left;
   }
-  .about, .projects {
+  .about, .links {
     width: 49.5%;
   }
 
@@ -246,13 +246,13 @@ footer li:first-child {
 	.container {
 		max-width: 900px;
 	}
-  .about, .projects, .contact {
+  .about, .links, .contact {
     width: 32.7%;
   }
-  .about, .projects {
+  .about, .links {
     margin-right: 7px;
   }
-  .projects {
+  .links {
     margin-left: 0px;
   }
 }
