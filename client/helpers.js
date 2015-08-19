@@ -4,16 +4,40 @@ var portfolio = [
   },
   {
     name: 'Whip', url: 'http://whip.meteor.com', tools: ['html5','geolocation', 'mobile']
+  }
+];
+
+var technologies = [
+  'JavaScript',
+  'C#',
+  'Node.js',
+  'VB',
+  'MeteorJS',
+  'AngularJS',
+  'XML',
+  'ASP.NET',
+  'MongoDB',
+  'SQL',
+  'HTML5',
+  'CSS3'
+];
+
+var myLinks = [
+  {
+    text: 'GitHub',
+    icon: 'GitHub-Mark-32px.png',
+    link: 'https://github.com/drewproud'
   },
-  // {
-  //   name: 'GreyingSky', url: 'http://greyingsky.co.za', tools: ['html5 theme']
-  // },
-  // {
-  //   name: 'Letladi', url: 'http://letladi.com', tools: ['css3', 'html5', 'MeteorJS']
-  // },
-  // {
-  //   name: 'Revolver Music', url: 'http://revolver.meteor.com', tools: ['css3', 'html5', 'MeteorJS']
-  // }
+  {
+    text: 'LinkedIn',
+    icon: 'In-2C-28px-R.png',
+    link: 'https://www.linkedin.com/in/drewproud'
+  },
+  {
+    text: 'facebook',
+    icon: 'FB-f-Logo__blue_29.png',
+    link: 'https://www.facebook.com/drew.proud/'
+  }
 ];
 
 Template.footer.helpers({
@@ -25,6 +49,14 @@ Template.footer.helpers({
 Template.layout.helpers({
   'projects': function() {
     return portfolio;
+  },
+
+  'technologies': function() {
+    return technologies;
+  },
+
+  'myLinks': function() {
+    return myLinks;
   }
 });
 Template.project.helpers({

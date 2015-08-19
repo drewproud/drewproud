@@ -21,7 +21,9 @@ html, body {
   position: relative;
   color: white;
   /*background-color: white;*/
-  background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");
+  /*background: linear-gradient(rgba(48, 66, 67, 0.65), rgba(48, 66, 67, 0.65)), url("city.jpg");*/
+  background-color: #3D5381;
+  min-height: 100vh;
 }
 
 .bg-img {
@@ -40,14 +42,13 @@ html, body {
 
 a {
 	color: #4BB143;
-	text-decoration: none;
 }
 
 li {
 	list-style: none;
 }
 
-div, header, footer, .section-links ul, .projects, .contact,
+div, header, footer, .section-links ul, .links, .contact,
 .contact-form, .contact-form input {
   position: relative;
   width: 100%;
@@ -96,30 +97,45 @@ header {
   margin-bottom: 1rem;
 }
 
-.about, .projects, .contact {
-  box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.26);
-  overflow: hidden;
-  background: rgba(0,0,0,.8);
+.about {
+  background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("drew2.jpg");
+  /*background-position-y: -100px;*/
+  background-size: cover;
 }
-.about, .projects {
+
+.links {
+  background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("city3.jpg");
+}
+
+.contact {
+  background: linear-gradient(rgba(48, 66, 67, 0.85), rgba(48, 66, 67, 0.85)), url("old.jpg");
+}
+
+.about, .links, .contact {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+  /*background: rgba(0,0,0,.8);*/
+}
+
+.about, .links {
   margin-bottom: 0.5rem;
 }
 
-.about, .projects, .contact, .projects > div, .contact > div, .front, .back {
+.about, .links, .contact, .links > div, .contact > div, .front, .back {
   height: 550px;
-  /*overflow: auto; ## If you leave this on; scroll-bar will     overflow-x: hidden;## appear udring animation
-   */
 }
-.about, .projects > div, .contact > div {
+
+.about, .links > div, .contact > div {
   padding: 10px;
 }
-.front > h2 {
-  text-align: center;
-}
+
 .front div {
   text-align: center;
-  padding-top: 180px;
+  font-size: 200%;
+  margin: auto;
+  text-transform: lowercase;
 }
+
 .back p > span:hover {
   font-weight: 700;
 }
@@ -131,17 +147,21 @@ header {
   backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
   cursor: pointer;
+  display: inline-flex;
 }
+
 .back {
-  position: absolute;
+  /*position: absolute;*/
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
 }
-.projects .hide-front, .contact .hide-front {
+
+.links .hide-front, .contact .hide-front, .about .hide-front {
   transform: perspective(600px) rotateY(-180deg);
 }
-.projects .show-back, .contact .show-back {
+
+.links .show-back, .contact .show-back, .about .show-back {
   transform: perspective(600px) rotateY(0deg);
 }
 
@@ -150,7 +170,8 @@ i {
   color: rgba(0, 158, 96, 0.5);
   transition: 0.8s;
 }
-.front:hover i {
+
+.front:hover {
   text-shadow: 1px 1px 1px rgba(0, 158, 96, 0.8);
 }
 
@@ -158,9 +179,11 @@ i {
   margin-top: 1rem;
   transition: 1s;
 }
+
 .project:hover {
   background-color: rgba(0, 158, 96, 0.1);
 }
+
 .project * {
   text-align: center;
 }
@@ -168,6 +191,7 @@ i {
 .contact-form {
   margin-top: 50px;
   background-color: transparent;
+  color: white;
 }
 .contact-form input {
   margin-top: 10px;
@@ -191,10 +215,11 @@ i {
 }
 /* footer */
 footer {
-	box-shadow: 0px -1px 1px rgba(0,0,0,0.2);
+	/*box-shadow: 0px -1px 1px rgba(0,0,0,0.2);*/
 	position: absolute;
 	bottom: 0;
 	background-color: #f9f9f9;
+  color: black;
 }
 footer li {
 	display: inline-block;
@@ -209,10 +234,10 @@ footer li:first-child {
   .about {
     margin-right: 7px;
   }
-  .about, .projects, .contact {
+  .about, .links, .contact {
     float: left;
   }
-  .about, .projects {
+  .about, .links {
     width: 49.5%;
   }
 
@@ -225,17 +250,53 @@ footer li:first-child {
 	.container {
 		max-width: 900px;
 	}
-  .about, .projects, .contact {
+  .about, .links, .contact {
     width: 32.7%;
   }
-  .about, .projects {
+  .about, .links {
     margin-right: 7px;
   }
-  .projects {
+  .links {
     margin-left: 0px;
   }
 }
 
 .back-btn {
   font-size: 125%;
+}
+
+.tech-stack li {
+  float: left;
+  padding: 1em;
+  margin: .5em;
+  background-color: rgba(227, 38, 54, 0.5);
+}
+
+.main h3 {
+  margin: 1em;
+  font-weight: 400;
+  color: #A3A2AD;
+}
+
+.mylinks li {
+  padding: 0;
+  margin: .5em;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: block;
+}
+
+.mylinks a {
+  display: block;
+  text-decoration: none;
+  color: #223866;
+  font-size: 150%;
+  text-align: center;
+}
+
+.mylinks img {
+  margin-top: .5em;
+}
+
+.mylinks p {
+
 }
