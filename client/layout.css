@@ -59,7 +59,6 @@ div, header, footer, .section-links ul, .links, .contact,
 	margin: 0 auto;
 	position: relative;
 	padding-bottom: 2rem;
-  min-width: 490px;
 }
 
 /* Header */
@@ -145,6 +144,8 @@ header {
   -webkit-transform: perspective(600px) rotateY(0deg);
   -moz-transform: perspective(600px) rotateY(0deg);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
   cursor: pointer;
   display: inline-flex;

@@ -1,7 +1,7 @@
 {
 	"private": {
 		"myEmailAddress": "<your-email-address>",
-		"emailsetting": "smtp://<your-full-gmail-address>:<your-gmail-password>@smtp.gmail.com:465/",
+		"emailSetting": "smtp://<your-full-gmail-address>:<your-gmail-password>@smtp.gmail.com:465/",
     "subject": "<A subject for your email>"
 	}
 }
