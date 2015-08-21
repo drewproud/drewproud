@@ -112,7 +112,7 @@ header {
 
 .about, .links, .contact {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
-  overflow: hidden;
+  overflow: visible;
   /*background: rgba(0,0,0,.8);*/
 }
 
@@ -124,7 +124,7 @@ header {
   height: 550px;
 }
 
-.about, .links > div, .contact > div {
+.about > div, .links > div, .contact > div {
   padding: 10px;
 }
 
@@ -148,13 +148,16 @@ header {
   -moz-backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
   cursor: pointer;
-  display: inline-flex;
+  display: inline-block;
+  line-height: 550px;
 }
 
 .back {
   /*position: absolute;*/
   transform: perspective(600px) rotateY(180deg);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   transition: transform 0.2s linear 0s;
 }
 
@@ -297,6 +300,8 @@ footer li {
   margin-top: .5em;
 }
 
-.mylinks p {
-
+.valign {
+  line-height: normal;
+  vertical-align: middle;
+  display: inline-block;
 }

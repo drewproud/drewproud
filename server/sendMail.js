@@ -1,4 +1,4 @@
-process.env.MAIL_URL = Meteor.settings.private.emailSetting;
+// process.env.MAIL_URL = Meteor.settings.private.emailSetting;
 
 Meteor.methods({
   sendEmail: function(name, fromEmail, message) {
