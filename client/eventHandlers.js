@@ -1,14 +1,22 @@
 Template.layout.events({
+
   'click .front': function(ev) {
     var sectionDivClass = getSectionDivClass($(ev.target).parents());
     turnDisplay(sectionDivClass);
   },
+
   'click .back': function(ev) {
     // Only turns it back if we clicked on the bare background, not a child element
     if (ev.currentTarget === ev.target) {
       var sectionDivClass = getSectionDivClass($(ev.target).parents());
       turnDisplay(sectionDivClass);
     }
+  },
+
+  'click .backlink a': function(ev) {
+    ev.stopPropagation();
+    var sectionDivClass = getSectionDivClass($(ev.target).parents());
+    turnDisplay(sectionDivClass);
   }
 });
 
